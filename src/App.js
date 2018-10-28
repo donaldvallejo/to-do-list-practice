@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const Todo = (props) => (
   <div className="todoPiece">
    {props.todo.text}
-   <button>Done</button>
+   <input type="checkbox" />
   </div>
 )
 class App extends Component {
