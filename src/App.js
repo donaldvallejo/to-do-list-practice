@@ -6,6 +6,17 @@ const Todo = (props) => (
    <input type="checkbox" />
   </div>
 )
+
+// class Print extends Component {
+//   constructor(props) {
+//     super(props);
+    
+//   }
+//   render() {
+//     return 
+//   }
+// }
+
 class App extends Component {
   
   state = { 
@@ -23,11 +34,12 @@ class App extends Component {
         done: false,
       },
     ],
-  }
+  }  
 
   render() {
     const todoList = this.state.done
     console.log(this.state)
+
     return (
       <div className="App">
       <h1>TO DO List</h1>
@@ -35,10 +47,12 @@ class App extends Component {
       {this.state.todoList.map((todo,index) => <Todo todo={todo} key={index} />)}    
       </div>
       
-      <div className="textField">
-        <input className="textfeild"></input>
+      {/* <form onSubmit="" className="textField"> */}
+      <div>
+        <input type="text" className="textfeild"></input>
         <button onClick={() => console.log("yo")} >Add</button>
-      </div> 
+      {/* </form>  */}
+      </div>
       </div>
     );
   }
